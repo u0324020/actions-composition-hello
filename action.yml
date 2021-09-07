@@ -19,3 +19,5 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
+      env:
+        name: ${{ inputs.who-to-greet }}
