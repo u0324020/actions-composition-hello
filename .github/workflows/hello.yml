@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/hello-world-composite-action@v1
+    - uses: u0324020/actions-composition-hello@v1
       id: foo
       with:
         who-to-greet: 'Jane'
