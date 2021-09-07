@@ -1,1 +1,2 @@
 echo "Goodbye"
+echo $name
