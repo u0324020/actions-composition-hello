@@ -9,6 +9,9 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-id }}
+  TAG_NAME:
+    description: tagname
+    value: ${{ steps.entrypoint.outputs.TAG_NAME }}
 runs:
   using: "composite"
   steps:
@@ -19,5 +22,6 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
+      id: entrypoint
       env:
         name: ${{ inputs.who-to-greet }}

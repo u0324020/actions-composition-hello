@@ -7,9 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: u0324020/actions-composition-hello@v2
+    - uses: u0324020/actions-composition-hello@v3
       id: foo
       with:
         who-to-greet: 'Jane'
+
     - run: echo random-number ${{ steps.foo.outputs.random-number }}
       shell: bash
+
+    - name: Get the output TAG_NAME
+      run: echo "The time was ${{ steps.foo.outputs.TAG_NAME }}"
