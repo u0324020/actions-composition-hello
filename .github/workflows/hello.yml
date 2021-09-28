@@ -16,4 +16,4 @@ jobs:
       shell: bash
 
     - name: Get the output TAG_NAME
-      run: echo "The time was ${{ steps.foo.outputs.TAG_NAME }}"
+      run: echo "The tag name is ${{ steps.foo.outputs.TAG_NAME }}"
